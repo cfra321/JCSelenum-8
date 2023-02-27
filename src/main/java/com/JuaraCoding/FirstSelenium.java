@@ -25,13 +25,16 @@ public class FirstSelenium {
         //scroll
         js.executeScript("window.scrollBy(0,500)");
         driver.findElement(By.id("submit")).click();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
+        delay(2);
+        delay(1);
         driver.quit();
         System.out.println("Browser Quit");
     }
+     static void delay(long detik){
+         try {
+             Thread.sleep(detik*1000);
+         } catch (InterruptedException e) {
+             throw new RuntimeException(e);
+         }
+     }
 }
